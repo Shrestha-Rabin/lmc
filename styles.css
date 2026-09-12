@@ -13,11 +13,17 @@
 html {
   scroll-behavior: smooth;
 }
+@font-face {
+    font-family: "Kalimati";
+    src: url("./fonts/Kalimati.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Kalimati", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 header {
   position: sticky;
