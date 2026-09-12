@@ -7,68 +7,25 @@
   --accent: #2563eb;
   --accent2: #eff6ff;
 }
-
-/* =========================
-   GLOBAL
-   ========================= */
-
 * {
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
-/* =========================
-   KALIMATI FONT
-   ========================= */
-
 @font-face {
   font-family: "Kalimati";
   src: url("./fonts/Kalimati.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
-
-/* =========================
-   BODY
-   ========================= */
-
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Kalimati", sans-serif;
+  font-family: "Kalimati", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
 }
-
-/* Make all common elements use Kalimati */
-input,
-button,
-textarea,
-select,
-pre,
-table,
-th,
-td,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-strong,
-div {
-  font-family: "Kalimati", sans-serif;
-}
-
-/* =========================
-   HEADER
-   ========================= */
-
 header {
   position: sticky;
   top: 0;
@@ -78,32 +35,23 @@ header {
   border-bottom: 1px solid var(--border);
   padding: 16px;
 }
-
 .header-inner {
   max-width: 1100px;
   margin: auto;
 }
-
 h1 {
   font-size: 21px;
   margin: 0 0 5px;
 }
-
 .subtitle {
   color: var(--muted);
   font-size: 13px;
   margin-bottom: 13px;
 }
-
-/* =========================
-   SEARCH
-   ========================= */
-
 .search-row {
   display: flex;
   gap: 8px;
 }
-
 #search {
   flex: 1;
   min-width: 0;
@@ -113,18 +61,11 @@ h1 {
   font-size: 18px;
   outline: none;
   background: #fff;
-  font-family: "Kalimati", sans-serif;
 }
-
 #search:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px #2563eb20;
 }
-
-/* =========================
-   BUTTON
-   ========================= */
-
 button {
   border: 0;
   border-radius: 10px;
@@ -133,37 +74,17 @@ button {
   color: #fff;
   font-weight: 700;
   cursor: pointer;
-  font-family: "Kalimati", sans-serif;
 }
-
-button:hover {
-  opacity: 0.92;
-}
-
-/* =========================
-   STATUS
-   ========================= */
-
 .status {
   color: var(--muted);
   font-size: 15px;
   margin-top: 8px;
 }
-
-/* =========================
-   MAIN
-   ========================= */
-
 main {
   max-width: 1100px;
   margin: auto;
   padding: 20px 16px 60px;
 }
-
-/* =========================
-   SECTIONS / CARDS
-   ========================= */
-
 .section {
   background: var(--card);
   border: 1px solid var(--border);
@@ -172,11 +93,6 @@ main {
   overflow: hidden;
   box-shadow: 0 2px 7px #1018280a;
 }
-
-/* =========================
-   SECTION HEADER
-   ========================= */
-
 .section-head {
   padding: 10px 14px;
   background: var(--accent2);
@@ -186,166 +102,126 @@ main {
   align-items: center;
   font-size: 13px;
 }
-
 .section-head span {
   color: var(--accent);
   font-weight: 700;
   white-space: nowrap;
 }
-
 .section-head strong {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
-/* =========================
-   JSON / PRE DATA
-   ========================= */
-
 pre {
   margin: 0;
   padding: 15px;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-
-  /* IMPORTANT: Kalimati instead of Noto Sans */
-  font-family: "Kalimati", sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
+  font: 14px/1.6 "Kalimati", "Noto Sans Devanagari", "Mangal", system-ui, sans-serif;
 }
-
-/* =========================
-   TABLE
-   ========================= */
-
-.table-wrap {
-  overflow: auto;
-  padding: 0;
+.hidden {
+  display: none;
 }
-
-.section table {
-  width: 100%;
-  border-collapse: collapse;
-
-  /* IMPORTANT: Kalimati */
-  font-family: "Kalimati", sans-serif;
-
-  font-size: 17px;
-}
-
-.section th,
-.section td {
-  border: 1px solid var(--border);
-  padding: 12px;
-  vertical-align: top;
-  text-align: left;
-
-  /* Make absolutely sure table content uses Kalimati */
-  font-family: "Kalimati", sans-serif;
-}
-
-.section th {
-  position: sticky;
-  top: 0;
-  background: var(--card);
-  z-index: 1;
-  font-weight: 700;
-}
-
-.section tr:nth-child(even) td {
-  background: rgba(148, 163, 184, 0.08);
-}
-
-/* =========================
-   TABLE COLUMN WIDTHS
-   ========================= */
-
-.section td:first-child,
-.section th:first-child {
-  white-space: nowrap;
-  width: 90px;
-}
-
-.section td:last-child,
-.section th:last-child {
-  white-space: nowrap;
-  width: 140px;
-}
-
-/* =========================
-   HIGHLIGHT / SEARCH RESULT
-   ========================= */
-
 mark {
   background: #fde68a;
-  border-radius: 3px;
-  padding: 0 0.08em;
-  font-family: "Kalimati", sans-serif;
+  border-radius: 2px;
+  padding: 0 1px;
 }
-
-.section table mark {
-  background: #fde68a;
-}
-
-/* =========================
-   HIDDEN
-   ========================= */
-
-.hidden {
-  display: none !important;
-}
-
-/* =========================
-   NO RESULTS
-   ========================= */
-
 #noResults {
   display: none;
   text-align: center;
   color: var(--muted);
   padding: 40px 10px;
 }
+@media (max-width: 600px) {
+  h1 {
+    font-size: 18px;
+  }
+  .search-row {
+    flex-direction: row;
+  }
+  button {
+    padding: 0 12px;
+  }
+  pre {
+    font-size: 13px;
+  }
+}
 
-/* =========================
-   MESSAGE
-   ========================= */
-
+.table-wrap {
+  overflow: auto;
+  padding: 0;
+}
+.section table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Kalimati", "Noto Sans Devanagari", "Mangal", system-ui, sans-serif;
+  font-size: 17px;
+}
+.section th,
+.section td {
+  border: 1px solid var(--border);
+  padding: 12px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.section th {
+  background: #f8fafc;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+}
+.section tr:nth-child(even) td {
+  background: #fcfcfd;
+}
+.section td:first-child,
+.section th:first-child {
+  white-space: nowrap;
+  width: 90px;
+}
+.section td:last-child,
+.section th:last-child {
+  white-space: nowrap;
+  width: 140px;
+}
+.section table mark {
+  background: #fde68a;
+}
 .message {
   padding: 24px;
   text-align: center;
   color: var(--muted);
-  font-family: "Kalimati", sans-serif;
 }
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 600px) {
-
-  h1 {
-    font-size: 18px;
-  }
-
-  .search-row {
-    flex-direction: row;
-  }
-
-  button {
-    padding: 0 12px;
-  }
-
-  pre {
-    font-size: 13px;
-  }
-
-  .section table {
-    font-size: 15px;
-  }
-
-  .section th,
-  .section td {
-    padding: 10px;
-  }
+.section table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Kalimati", "Noto Sans Devanagari", "Mangal", system-ui, sans-serif;
+  font-size: 17px;
+}
+.section th,
+.section td {
+  border: 1px solid var(--border);
+  padding: 12px;
+  vertical-align: top;
+  text-align: left;
+}
+.section th {
+  position: sticky;
+  top: 0;
+  background: var(--card);
+  z-index: 1;
+}
+.section tr:nth-child(even) {
+  background: rgba(148, 163, 184, 0.08);
+}
+.table-wrap {
+  overflow: auto;
+  padding: 0;
+}
+.hidden {
+  display: none !important;
+}
+mark {
+  padding: 0 0.08em;
+  border-radius: 3px;
 }
