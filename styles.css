@@ -154,7 +154,7 @@ mark {
 .section table {
   width: 100%;
   border-collapse: collapse;
-  font-family: "Noto Sans Devanagari", "Mangal", system-ui, sans-serif;
+  font-family: "Kalimati", "Noto Sans Devanagari", "Mangal", system-ui, sans-serif;
   font-size: 17px;
 }
 .section th,
